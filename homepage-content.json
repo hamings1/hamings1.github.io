@@ -1,0 +1,45 @@
+{
+  "phone": "(+86) 18935255267",
+  "phoneHref": "tel:+8618935255267",
+  "updated": "October 9, 2026",
+  "publications": [
+    {
+      "id": "liang2026spikinglm",
+      "title": "SpikingLM: Towards Fully Spiking Language Model",
+      "authors": "Yu Liang, Zijian Zhou, Wenjie Wei, Shuai Wang, Honglin Cao, Ammar Belatreche, Yu Yang, Malu Zhang, Yang Yang, Haizhou Li",
+      "venue": "ICML 2026",
+      "image": "/papers/spikinglm.png",
+      "imageAlt": "SpikingLM architecture with Distribution-aware Scaling and Spike2Max attention",
+      "description": "A fully spiking language model with Distribution-aware Scaling and Spike2Max attention for energy-efficient language understanding.",
+      "paper": "https://proceedings.mlr.press/v306/liang26ae.html",
+      "code": "https://github.com/hamings1/SpikingLM"
+    },
+    {
+      "id": "liang2025towards",
+      "title": "Towards Accurate Binary Spiking Neural Networks: Learning with Adaptive Gradient Modulation Mechanism",
+      "authors": "Yu Liang, Wenjie Wei, Ammar Belatreche, Honglin Cao, Zijian Zhou, Shuai Wang, Malu Zhang, Yang Yang",
+      "venue": "AAAI 2025 · Oral",
+      "image": "/papers/agmm.png",
+      "imageAlt": "Network architecture and backpropagation of Adaptive Gradient Modulation Mechanism",
+      "description": "Adaptive gradient modulation reduces frequent weight sign flipping, improving convergence and accuracy in binary spiking neural networks.",
+      "paper": "https://arxiv.org/abs/2502.14344",
+      "code": "https://github.com/hamings1/AGMM"
+    },
+    {
+      "id": "liang2025bso",
+      "title": "BSO: Binary Spiking Online Optimization Algorithm",
+      "authors": "Yu Liang, Yu Yang, Wenjie Wei, Ammar Belatreche, Shuai Wang, Malu Zhang, Yang Yang",
+      "venue": "ICML 2025",
+      "image": "/papers/bso.png",
+      "imageAlt": "Binary weight update strategies in BSO and temporal-aware T-BSO",
+      "description": "Memory-efficient online training for binary spiking neural networks, with direct weight updates and a temporal-aware optimization variant.",
+      "paper": "https://arxiv.org/abs/2511.12502",
+      "code": "https://github.com/hamings1/BSO"
+    }
+  ],
+  "news": [
+    {"date":"2026-05","content":"5 papers accepted by ICML 2026 🎉"},
+    {"date":"2025-05","content":"Our work has been accepted by ICML 🎉"},
+    {"date":"2025-01","content":"Our work has been accepted by AAAI 🎉"}
+  ]
+}

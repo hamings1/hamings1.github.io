@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Visitor locations</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;font:13px/1.5 system-ui,sans-serif;color:#637383;background:transparent;text-align:center}
+    #map-placeholder img{display:block;width:100%;height:auto;border:1px solid #edf1f4}
+    p{margin:0 0 12px}#map-placeholder small{display:block;margin-top:10px;font-size:12px}
+    #map-widget{width:100%;max-width:500px;margin:auto}#map-widget img,#map-widget canvas{max-width:100%;height:auto}
+    a{color:#1b5292}
+  </style>
+</head>
+<body>
+  <div id="map-placeholder">
+    <p>Visitor locations</p>
+    <img src="/assets/world-map.svg" width="720" height="360" alt="World map; visitor tracking is not yet enabled">
+    <small>Visitor statistics coming soon.</small>
+  </div>
+  <div id="map-widget"></div>
+  <script src="/assets/visitor-map.js"></script>
+</body>
+</html>
