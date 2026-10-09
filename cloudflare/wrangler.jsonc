@@ -1,0 +1,15 @@
+{
+  "name": "hamings1-visitor-map",
+  "account_id": "f75c1d4fd42d386233fd18cb265d3382",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-10-09",
+  "workers_dev": true,
+  "observability": { "enabled": false },
+  "d1_databases": [
+    { "binding": "DB", "database_name": "hamings1-visitors", "database_id": "fd2af30f-32c3-414a-8156-3a9442902921" }
+  ],
+  "ratelimits": [
+    { "name": "RATE_LIMIT", "namespace_id": "2026100901", "simple": { "limit": 20, "period": 60 } },
+    { "name": "GLOBAL_LIMIT", "namespace_id": "2026100902", "simple": { "limit": 600, "period": 60 } }
+  ]
+}

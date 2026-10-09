@@ -9,9 +9,11 @@ This repository contains the deployed Next.js static export rather than the orig
 
 ## Visitor map
 
-The map is currently an explicitly labelled preview; it does not collect visits or invent visitor counts. Register `https://hamings1.github.io/` with ClustrMaps and put the unique `d` parameter from the generated embed code into `clustrMapsSiteId` in `assets/visitor-map.js`. The widget runs inside `visitors.html`, isolated from React hydration and page navigation. Confirm the provider displays visits for the correct website after enabling it.
+The map uses a Cloudflare Worker and D1 database. See `cloudflare/README.md` for deployment. The public Worker origin belongs in `assets/visitor-config.json`; no credentials are published. An empty endpoint displays an honest pending state. The map runs inside `visitors.html`, isolated from React hydration, and loads with the homepage so visits do not depend on scrolling to the footer.
 
-The neutral world outline uses public-domain Natural Earth data distributed in `world-atlas@2/land-110m.json`.
+Counts represent browser-tab visits, merged within a fixed 30-minute window, rather than unique people. Only country-level aggregate counts and the date counting first began are stored in D1. IPs are used transiently for daily rotating hashed rate-limit keys, never stored in the database. Basic bot filtering, client opt-out, and rate limiting reduce noise; this is not fraud-proof analytics. Failed requests and ad blockers can cause undercounting.
+
+The neutral world outline uses public-domain Natural Earth data distributed in `world-atlas@2/land-110m.json`. Country centroid coordinates come from Google's DSPL canonical countries dataset: https://github.com/google/dspl/blob/master/samples/google/canonical/countries.csv . Points mark country centroids, not visitors' exact locations.
 
 ## Paper figures
 

@@ -16,7 +16,7 @@ const paper = p => h('article',{className:'paper-row',id:p.id},[
       h('li',{className:'paper-authors'},[h('strong',{},'Yu Liang'),p.authors.slice('Yu Liang'.length)]),
       h('li',{},p.description),h('li',{},h('div',{className:'paper-links'},[link('Paper',p.paper),link('Code',p.code)]))])])]);
 const content = h('section',{id:'about',className:'scroll-mt-24 space-y-8 home-content'},[
-  h('link',{rel:'stylesheet',href:'/assets/homepage.css?v=20261009'}),
+  h('link',{rel:'stylesheet',href:'/assets/homepage.css?v=20261009-cf'}),
   h('section',{'aria-label':'About'},[heading('👋','About'),h('div',{className:'home-about'},[
     h('p',{},['I am a doctoral student in the School of Computer Science at the University of Electronic Science and Technology of China (UESTC), under the supervision of ',h('a',{href:'https://www.en.scse.uestc.edu.cn/info/1085/2257.htm',target:'_blank',rel:'noopener noreferrer'},'Prof. Malu Zhang'),'. I am participating in a joint Ph.D. training program with the Shenzhen Loop Area Institute.']),
     h('p',{},'Previously, I graduated from UESTC with a Bachelor of Engineering degree.'),
@@ -24,7 +24,7 @@ const content = h('section',{id:'about',className:'scroll-mt-24 space-y-8 home-c
     h('p',{className:'contact-line'},['Please feel free to contact me via Phone: ',h('a',{href:data.phoneHref},data.phone),'.'])])]),
   h('section',{'aria-label':'News'},[heading('🔥','News'),h('ul',{className:'home-news'},data.news.map(n=>h('li',{},[h('time',{dateTime:n.date},n.date),h('span',{},n.content)])))]),
   h('section',{'aria-label':'Selected Publications'},[heading('📝','Selected Publications',true),h('div',{className:'paper-list'},data.publications.map(paper))]),
-  h('section',{'aria-label':'Visitors'},[heading('🌍','Visitors'),h('iframe',{className:'visitor-frame',src:'/visitors.html',title:'Visitor locations around the world',loading:'lazy'})])
+  h('section',{'aria-label':'Visitors'},[heading('🌍','Visitors'),h('iframe',{className:'visitor-frame',src:'/visitors.html?v=cloudflare1',title:'Visitor locations around the world'})])
 ]);
 function walk(value) {
   if (!value || typeof value!=='object') return value;

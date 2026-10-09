@@ -7,19 +7,26 @@
   <title>Visitor locations</title>
   <style>
     *{box-sizing:border-box}body{margin:0;font:13px/1.5 system-ui,sans-serif;color:#637383;background:transparent;text-align:center}
-    #map-placeholder img{display:block;width:100%;height:auto;border:1px solid #edf1f4}
-    p{margin:0 0 12px}#map-placeholder small{display:block;margin-top:10px;font-size:12px}
-    #map-widget{width:100%;max-width:500px;margin:auto}#map-widget img,#map-widget canvas{max-width:100%;height:auto}
-    a{color:#1b5292}
+    #world-map{display:block;width:100%;height:auto;border:1px solid #edf1f4;background:#f6f9fb}
+    #map-points circle{fill:#2563eb;fill-opacity:.72;stroke:#fff;stroke-width:1.2;cursor:help}
+    #map-points circle:hover,#map-points circle:focus{fill:#1748bb;fill-opacity:1;stroke-width:2;outline:none}
+    p{margin:0 0 10px}#map-status{display:block;margin:9px 0 5px;font-size:11px}
+    #visit-total{font-weight:500;color:#293746}details{font-size:11px}summary{cursor:pointer}ul{list-style:none;padding:0;margin:7px 0;display:flex;justify-content:center;gap:4px 16px;flex-wrap:wrap;max-height:64px;overflow:auto}
+    #retry{background:#edf2f7;color:#1b5292;border:0;border-radius:3px;padding:3px 10px;cursor:pointer;font:inherit}
+    .privacy{margin:4px auto 0;font-size:10px;color:#758391;max-width:440px}
   </style>
 </head>
 <body>
-  <div id="map-placeholder">
-    <p>Visitor locations</p>
-    <img src="/assets/world-map.svg" width="720" height="360" alt="World map; visitor tracking is not yet enabled">
-    <small>Visitor statistics coming soon.</small>
-  </div>
-  <div id="map-widget"></div>
-  <script src="/assets/visitor-map.js"></script>
+  <p id="visit-total">Visitor locations</p>
+  <svg id="world-map" viewBox="0 0 720 360" role="img" aria-label="World map; visitor statistics are not yet enabled">
+    <image href="/assets/world-map.svg" width="720" height="360"/>
+    <g id="map-points"></g>
+  </svg>
+  <p id="map-status" role="status" aria-live="polite">Loading visitor statistics…</p>
+  <button id="retry" type="button" hidden>Retry</button>
+  <details id="country-details" hidden><summary>Visits by country / region</summary><ul id="country-list"></ul></details>
+  <p class="privacy">Approximate country / region locations. Repeat views within 30 minutes in the same tab count as one visit. No raw IP addresses are stored.</p>
+  <noscript><p>Enable JavaScript to display visitor statistics.</p></noscript>
+  <script src="/assets/visitor-cloudflare.js"></script>
 </body>
 </html>
