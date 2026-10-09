@@ -15,13 +15,14 @@
   };
   function show(data) {
     if (!Number.isSafeInteger(data.total) || data.total < 0 || !Array.isArray(data.countries)) throw new Error('Invalid statistics');
-    total.textContent = `${data.total.toLocaleString('en')} visits`;
+    const countLabel = `${data.total.toLocaleString('en')} ${data.total===1?'visit':'visits'}`;
+    total.textContent = countLabel;
     points.replaceChildren(); list.replaceChildren();
     let regions = 0;
     for (const item of data.countries) {
       if (!/^[A-Z]{2}$/.test(item.country) || !Number.isSafeInteger(item.visits) || item.visits <= 0) continue;
       const label = item.country==='XX'?'Unknown region':names.of(item.country);
-      const text = `${label}: ${item.visits.toLocaleString('en')} visits`;
+      const text = `${label}: ${item.visits.toLocaleString('en')} ${item.visits===1?'visit':'visits'}`;
       const li = document.createElement('li');li.textContent = text;list.appendChild(li);
       const pos = coordinates[item.country];
       if (!pos) continue;
@@ -33,10 +34,10 @@
       circle.setAttribute('tabindex','0');circle.setAttribute('role','img');circle.setAttribute('aria-label',text);
       const title=document.createElementNS(ns,'title');title.textContent=text;circle.appendChild(title);points.appendChild(circle);
     }
-    status.textContent = data.total ? `${regions} countries / regions · powered by Cloudflare` : 'No visits recorded yet · powered by Cloudflare';
+    status.textContent = data.total ? `${regions} ${regions===1?'country / region':'countries / regions'} · powered by Cloudflare` : 'No visits recorded yet · powered by Cloudflare';
     document.getElementById('country-details').hidden = !data.countries.length;
     retry.hidden = true;
-    document.getElementById('world-map').setAttribute('aria-label',`World map showing ${data.total} visits by country or region`);
+    document.getElementById('world-map').setAttribute('aria-label',`World map showing ${countLabel} by country or region`);
   }
   async function loadStats() {
     status.textContent='Loading visitor statistics…';retry.hidden=true;
