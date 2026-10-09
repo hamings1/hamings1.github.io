@@ -16,7 +16,7 @@ const paper = p => h('article',{className:'paper-row',id:p.id},[
       h('li',{className:'paper-authors'},[h('strong',{},'Yu Liang'),p.authors.slice('Yu Liang'.length)]),
       h('li',{},p.description),h('li',{},h('div',{className:'paper-links'},[link('Paper',p.paper),link('Code',p.code)]))])])]);
 const content = h('section',{id:'about',className:'scroll-mt-24 space-y-8 home-content'},[
-  h('link',{rel:'stylesheet',href:'/assets/homepage.css?v=20261009-cf'}),
+  h('link',{rel:'stylesheet',href:'/assets/homepage.css?v=20261009-wide'}),
   h('section',{'aria-label':'About'},[heading('👋','About'),h('div',{className:'home-about'},[
     h('p',{},['I am a doctoral student in the School of Computer Science at the University of Electronic Science and Technology of China (UESTC), under the supervision of ',h('a',{href:'https://www.en.scse.uestc.edu.cn/info/1085/2257.htm',target:'_blank',rel:'noopener noreferrer'},'Prof. Malu Zhang'),'. I am participating in a joint Ph.D. training program with the Shenzhen Loop Area Institute.']),
     h('p',{},'Previously, I graduated from UESTC with a Bachelor of Engineering degree.'),

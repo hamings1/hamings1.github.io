@@ -4,7 +4,7 @@ This repository contains the deployed Next.js static export rather than the orig
 
 - Edit `homepage-content.json` to update the phone number, news, and featured papers.
 - Run `node scripts/update-homepage.cjs` to update both server HTML and the React Server Component payloads. This keeps initial loads and client-side navigation consistent without changing compiled framework code or the sidebar.
-- Styles are scoped to `#about.home-content` in `assets/homepage.css`.
+- Styles are scoped to `#about.home-content` in `assets/homepage.css`. Homepage-only `:has(#about.home-content)` selectors widen its outer container to 1600px and give the sidebar a fixed desktop width, allowing the paper column to use the remaining space without changing other pages.
 - The full publication directory, navigation, sidebar, theme switcher, and other pages retain their existing implementation.
 
 ## Visitor map
