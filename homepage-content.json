@@ -1,7 +1,19 @@
 {
   "phone": "(+86) 18935255267",
   "phoneHref": "tel:+8618935255267",
-  "updated": "October 9, 2026",
+  "updated": "October 10, 2026",
+  "services": {
+    "journals": ["TETCI", "TMLR"],
+    "conferences": [
+      {"venue":"ICLR", "year":"2027"},
+      {"venue":"AAAI", "year":"2027"},
+      {"venue":"ICML", "year":"2026"},
+      {"venue":"NeurIPS", "year":"2026"},
+      {"venue":"AAAI", "year":"2025"},
+      {"venue":"CVPR", "year":"2025"},
+      {"venue":"ICLR", "year":"2025"}
+    ]
+  },
   "publications": [
     {
       "id": "liang2026spikinglm",
