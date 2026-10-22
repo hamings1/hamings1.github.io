@@ -21,7 +21,7 @@ const content = h('section',{id:'about',className:'scroll-mt-24 space-y-8 home-c
     h('p',{},['I am a doctoral student in the School of Computer Science at the University of Electronic Science and Technology of China (UESTC), under the supervision of ',h('a',{href:'https://www.en.scse.uestc.edu.cn/info/1085/2257.htm',target:'_blank',rel:'noopener noreferrer'},'Prof. Malu Zhang'),'. I am participating in a joint Ph.D. training program with the Shenzhen Loop Area Institute.']),
     h('p',{},'Previously, I graduated from UESTC with a Bachelor of Engineering degree.'),
     h('p',{},'My current research focuses on model compression, the integration of large models, and neuromorphic computing.'),
-    h('p',{className:'contact-line'},['Please feel free to contact me via Phone: ',h('a',{href:data.phoneHref},data.phone),'.'])])]),
+    h('p',{className:'contact-line'},['Please feel free to contact me via Phone: ',h('a',{href:data.phoneHref},data.phone),' (also WeChat) / ',h('a',{href:data.additionalPhoneHref},data.additionalPhone),'.'])])]),
   h('section',{'aria-label':'News'},[heading('🔥','News'),h('ul',{className:'home-news'},data.news.map(n=>h('li',{},[h('time',{dateTime:n.date},n.date),h('span',{},n.content)])))]),
   h('section',{'aria-label':'Selected Publications'},[heading('📝','Selected Publications',true),h('div',{className:'paper-list'},data.publications.map(paper))]),
   h('section',{id:'services','aria-label':'Services'},[

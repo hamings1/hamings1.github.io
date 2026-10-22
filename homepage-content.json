@@ -1,7 +1,9 @@
 {
   "phone": "(+86) 18935255267",
   "phoneHref": "tel:+8618935255267",
-  "updated": "October 10, 2026",
+  "additionalPhone": "(+86) 15828375248",
+  "additionalPhoneHref": "tel:+8615828375248",
+  "updated": "October 22, 2026",
   "services": {
     "journals": ["TETCI", "TMLR"],
     "conferences": [
