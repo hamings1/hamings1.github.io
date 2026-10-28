@@ -17,7 +17,9 @@ The neutral world outline uses public-domain Natural Earth data distributed in `
 
 ## Paper figures
 
-The `others` array contains the remaining papers, with verified publisher/arXiv links and the owner highlighted by exact name. Its nine entries plus the three featured papers cover the twelve records on the Publications page. News includes all authorship positions, grouped by conference and year; `paperIds` records the coverage behind each count. Year-only news labels refer to conference years, not inferred acceptance months. The final IJCAI proceedings supplies the author order for BESTformer.
+The `others` array contains the remaining papers, with verified publisher/arXiv links and the owner highlighted by exact name. Its nine entries plus the three featured papers cover the twelve records on the Publications page. News includes all authorship positions, grouped by conference and year; `paperIds` records the coverage behind each count. News dates use `YYYY-MM` acceptance-announcement months, with `dateSource` and `dateBasis` recording the evidence. ICML 2026 uses the coauthor's May announcement; the other entries use official conference author-notification dates. These are announcement months, not conference dates or claims about the owner's individual notification email. The final IJCAI proceedings supplies the author order for BESTformer.
+
+Others supports an optional `code` URL, rendered beside Paper. Seven entries have public author repositories verified on October 28, 2026. No confirmed public code repository was found for Saccadic Attention or Activation-Aware Redistribution; omit their Code buttons until a verified URL is available. QP-SNN has implementation files but no README.
 
 - SpikingLM: Figure 1, page 3, https://proceedings.mlr.press/v306/liang26ae.html
 - AGMM: Figure 3, page 4, https://arxiv.org/abs/2502.14344

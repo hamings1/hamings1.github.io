@@ -77,7 +77,7 @@
   ],
   "news": [
     {
-      "date": "2026",
+      "date": "2026-05",
       "content": "5 papers accepted by ICML 2026, including 1 Spotlight! 🎉",
       "paperIds": [
         "liang2026spikinglm",
@@ -85,50 +85,64 @@
         "mao2026seps",
         "zhou2026adas",
         "zhou2026smoothspike"
-      ]
+      ],
+      "dateSource": "https://wenjie-wei.github.io/",
+      "dateBasis": "Coauthor acceptance announcement"
     },
     {
-      "date": "2026",
+      "date": "2025-11",
       "content": "1 paper accepted by AAAI 2026! 🎉",
       "paperIds": [
         "cao2026training"
-      ]
+      ],
+      "dateSource": "https://aaai.org/conference/aaai/aaai-26/",
+      "dateBasis": "Official conference author notification"
     },
     {
-      "date": "2025",
+      "date": "2025-05",
       "content": "1 paper accepted by ICML 2025! 🎉",
       "paperIds": [
         "liang2025bso"
-      ]
+      ],
+      "dateSource": "https://icml.cc/Conferences/2025/Dates",
+      "dateBasis": "Official conference author notification"
     },
     {
-      "date": "2025",
+      "date": "2025-04",
       "content": "1 paper accepted by IJCAI 2025! 🎉",
       "paperIds": [
         "cao2025binary"
-      ]
+      ],
+      "dateSource": "https://2025.ijcai.org/important-dates/",
+      "dateBasis": "Official conference author notification"
     },
     {
-      "date": "2025",
+      "date": "2025-01",
       "content": "2 papers accepted by ICLR 2025! 🎉",
       "paperIds": [
         "wang2025spiking",
         "wei2025qp"
-      ]
+      ],
+      "dateSource": "https://iclr.cc/Conferences/2025/Dates",
+      "dateBasis": "Official conference author notification"
     },
     {
-      "date": "2025",
+      "date": "2024-12",
       "content": "1 paper accepted by AAAI 2025 (Oral)! 🎉",
       "paperIds": [
         "liang2025towards"
-      ]
+      ],
+      "dateSource": "https://aaai.org/conference/aaai/aaai-25/",
+      "dateBasis": "Official conference author notification"
     },
     {
-      "date": "2024",
+      "date": "2024-07",
       "content": "1 paper accepted by ACM Multimedia 2024! 🎉",
       "paperIds": [
         "wei2024q"
-      ]
+      ],
+      "dateSource": "https://2024.acmmm.org/important-dates",
+      "dateBasis": "Official conference author notification"
     }
   ],
   "others": [
@@ -148,7 +162,8 @@
         "Haizhou Li"
       ],
       "venue": "ICML 2026",
-      "paper": "https://proceedings.mlr.press/v306/zhou26ab.html"
+      "paper": "https://proceedings.mlr.press/v306/zhou26ab.html",
+      "code": "https://github.com/CayleyZ/SPE"
     },
     {
       "id": "mao2026seps",
@@ -161,7 +176,8 @@
         "Ming Sun"
       ],
       "venue": "ICML 2026",
-      "paper": "https://proceedings.mlr.press/v306/mao26d.html"
+      "paper": "https://proceedings.mlr.press/v306/mao26d.html",
+      "code": "https://github.com/Sweet4tars/seps"
     },
     {
       "id": "zhou2026adas",
@@ -181,7 +197,8 @@
         "Haizhou Li"
       ],
       "venue": "ICML 2026",
-      "paper": "https://proceedings.mlr.press/v306/zhou26d.html"
+      "paper": "https://proceedings.mlr.press/v306/zhou26d.html",
+      "code": "https://github.com/CayleyZ/AdaS"
     },
     {
       "id": "zhou2026smoothspike",
@@ -199,7 +216,8 @@
         "Haizhou Li"
       ],
       "venue": "ICML 2026 · Spotlight",
-      "paper": "https://proceedings.mlr.press/v306/zhou26ax.html"
+      "paper": "https://proceedings.mlr.press/v306/zhou26ax.html",
+      "code": "https://github.com/CayleyZ/SmoothSpike"
     },
     {
       "id": "cao2026training",
@@ -234,7 +252,8 @@
         "Haizhou Li"
       ],
       "venue": "IJCAI 2025",
-      "paper": "https://www.ijcai.org/proceedings/2025/458"
+      "paper": "https://www.ijcai.org/proceedings/2025/458",
+      "code": "https://github.com/CaoHLin/BESTFormer"
     },
     {
       "id": "wang2025spiking",
@@ -269,7 +288,8 @@
         "Yang Yang"
       ],
       "venue": "ICLR 2025",
-      "paper": "https://arxiv.org/abs/2502.05905"
+      "paper": "https://arxiv.org/abs/2502.05905",
+      "code": "https://github.com/Wenjie-Wei/QP-SNN"
     },
     {
       "id": "wei2024q",
@@ -286,7 +306,8 @@
         "Yang Yang"
       ],
       "venue": "ACM MM 2024",
-      "paper": "https://arxiv.org/abs/2406.13672"
+      "paper": "https://arxiv.org/abs/2406.13672",
+      "code": "https://github.com/Wenjie-Wei/Q-SNNs"
     }
   ]
 }

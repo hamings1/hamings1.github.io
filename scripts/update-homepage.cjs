@@ -18,7 +18,7 @@ const paper = p => h('article',{className:'paper-row',id:p.id},[
 const otherPaper = p => h('li',{id:p.id,className:'other-paper'},[
   h('div',{className:'other-paper-title'},[h('span',{className:'other-paper-venue'},p.venue), ' ', h('a',{href:p.paper,target:'_blank',rel:'noopener noreferrer'},p.title)]),
   h('div',{className:'other-paper-authors'},[p.authors.slice(0,p.authors.indexOf('Yu Liang')).join(', ')+(p.authors.indexOf('Yu Liang')>0?', ':''),h('strong',{},'Yu Liang'),(p.authors.indexOf('Yu Liang')<p.authors.length-1?', ':'')+p.authors.slice(p.authors.indexOf('Yu Liang')+1).join(', ')]),
-  h('div',{className:'paper-links'},[link('Paper',p.paper)])
+  h('div',{className:'paper-links'},[link('Paper',p.paper),...(p.code?[link('Code',p.code)]:[])])
 ]);
 const content = h('section',{id:'about',className:'scroll-mt-24 space-y-8 home-content'},[
   h('link',{rel:'stylesheet',href:'/assets/homepage.css?v=20261028-others'}),
