@@ -50,7 +50,13 @@
       "imageAlt": "SpikingLM architecture with Distribution-aware Scaling and Spike2Max attention",
       "description": "A fully spiking language model with Distribution-aware Scaling and Spike2Max attention for energy-efficient language understanding.",
       "paper": "https://proceedings.mlr.press/v306/liang26ae.html",
-      "code": "https://github.com/hamings1/SpikingLM"
+      "code": "https://github.com/hamings1/SpikingLM",
+      "project": "/projects/spikinglm/",
+      "topics": [
+        "Language Models",
+        "Neuromorphic Computing"
+      ],
+      "year": 2026
     },
     {
       "id": "liang2025towards",
@@ -61,7 +67,13 @@
       "imageAlt": "Network architecture and backpropagation of Adaptive Gradient Modulation Mechanism",
       "description": "Adaptive gradient modulation reduces frequent weight sign flipping, improving convergence and accuracy in binary spiking neural networks.",
       "paper": "https://arxiv.org/abs/2502.14344",
-      "code": "https://github.com/hamings1/AGMM"
+      "code": "https://github.com/hamings1/AGMM",
+      "project": "/projects/agmm/",
+      "topics": [
+        "Model Compression",
+        "Neuromorphic Computing"
+      ],
+      "year": 2025
     },
     {
       "id": "liang2025bso",
@@ -72,7 +84,13 @@
       "imageAlt": "Binary weight update strategies in BSO and temporal-aware T-BSO",
       "description": "Memory-efficient online training for binary spiking neural networks, with direct weight updates and a temporal-aware optimization variant.",
       "paper": "https://arxiv.org/abs/2511.12502",
-      "code": "https://github.com/hamings1/BSO"
+      "code": "https://github.com/hamings1/BSO",
+      "project": "/projects/bso/",
+      "topics": [
+        "Model Compression",
+        "Neuromorphic Computing"
+      ],
+      "year": 2025
     }
   ],
   "news": [
@@ -163,7 +181,11 @@
       ],
       "venue": "ICML 2026",
       "paper": "https://proceedings.mlr.press/v306/zhou26ab.html",
-      "code": "https://github.com/CayleyZ/SPE"
+      "code": "https://github.com/CayleyZ/SPE",
+      "topics": [
+        "Neuromorphic Computing"
+      ],
+      "year": 2026
     },
     {
       "id": "mao2026seps",
@@ -177,7 +199,11 @@
       ],
       "venue": "ICML 2026",
       "paper": "https://proceedings.mlr.press/v306/mao26d.html",
-      "code": "https://github.com/Sweet4tars/seps"
+      "code": "https://github.com/Sweet4tars/seps",
+      "topics": [
+        "Multimodal Learning"
+      ],
+      "year": 2026
     },
     {
       "id": "zhou2026adas",
@@ -198,7 +224,11 @@
       ],
       "venue": "ICML 2026",
       "paper": "https://proceedings.mlr.press/v306/zhou26d.html",
-      "code": "https://github.com/CayleyZ/AdaS"
+      "code": "https://github.com/CayleyZ/AdaS",
+      "topics": [
+        "Neuromorphic Computing"
+      ],
+      "year": 2026
     },
     {
       "id": "zhou2026smoothspike",
@@ -217,7 +247,12 @@
       ],
       "venue": "ICML 2026 · Spotlight",
       "paper": "https://proceedings.mlr.press/v306/zhou26ax.html",
-      "code": "https://github.com/CayleyZ/SmoothSpike"
+      "code": "https://github.com/CayleyZ/SmoothSpike",
+      "topics": [
+        "Model Compression",
+        "Neuromorphic Computing"
+      ],
+      "year": 2026
     },
     {
       "id": "cao2026training",
@@ -235,7 +270,11 @@
         "Haizhou Li"
       ],
       "venue": "AAAI 2026",
-      "paper": "https://ojs.aaai.org/index.php/AAAI/article/view/37148"
+      "paper": "https://ojs.aaai.org/index.php/AAAI/article/view/37148",
+      "topics": [
+        "Neuromorphic Computing"
+      ],
+      "year": 2026
     },
     {
       "id": "cao2025binary",
@@ -253,7 +292,12 @@
       ],
       "venue": "IJCAI 2025",
       "paper": "https://www.ijcai.org/proceedings/2025/458",
-      "code": "https://github.com/CaoHLin/BESTFormer"
+      "code": "https://github.com/CaoHLin/BESTFormer",
+      "topics": [
+        "Model Compression",
+        "Neuromorphic Computing"
+      ],
+      "year": 2025
     },
     {
       "id": "wang2025spiking",
@@ -271,7 +315,11 @@
         "Yang Yang"
       ],
       "venue": "ICLR 2025",
-      "paper": "https://arxiv.org/abs/2502.12677"
+      "paper": "https://arxiv.org/abs/2502.12677",
+      "topics": [
+        "Neuromorphic Computing"
+      ],
+      "year": 2025
     },
     {
       "id": "wei2025qp",
@@ -289,7 +337,12 @@
       ],
       "venue": "ICLR 2025",
       "paper": "https://arxiv.org/abs/2502.05905",
-      "code": "https://github.com/Wenjie-Wei/QP-SNN"
+      "code": "https://github.com/Wenjie-Wei/QP-SNN",
+      "topics": [
+        "Model Compression",
+        "Neuromorphic Computing"
+      ],
+      "year": 2025
     },
     {
       "id": "wei2024q",
@@ -307,7 +360,17 @@
       ],
       "venue": "ACM MM 2024",
       "paper": "https://arxiv.org/abs/2406.13672",
-      "code": "https://github.com/Wenjie-Wei/Q-SNNs"
+      "code": "https://github.com/Wenjie-Wei/Q-SNNs",
+      "topics": [
+        "Model Compression",
+        "Neuromorphic Computing"
+      ],
+      "year": 2024
     }
-  ]
+  ],
+  "seo": {
+    "title": "Yu Liang | Efficient AI | UESTC",
+    "description": "Yu Liang is a PhD student at UESTC researching efficient AI, model compression, language models and neuromorphic computing. Explore publications, code and research projects.",
+    "verification": "Wrg7iuJLvga6M8JdAKe-ZBkK3zt0wc_cdAh7Vtug8M8"
+  }
 }

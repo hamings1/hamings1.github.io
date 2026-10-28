@@ -5,7 +5,21 @@ This repository contains the deployed Next.js static export rather than the orig
 - Edit `homepage-content.json` to update the phone number, news, featured papers, and reviewer services. The `services` data feeds both the homepage summary and the standalone Services page.
 - Run `node scripts/update-homepage.cjs` to update both server HTML and the React Server Component payloads. This keeps initial loads and client-side navigation consistent without changing compiled framework code or the sidebar.
 - Styles are scoped to `#about.home-content` in `assets/homepage.css`. Homepage-only `:has(#about.home-content)` selectors widen its outer container to 1600px and give the sidebar a fixed desktop width, allowing the paper column to use the remaining space without changing other pages.
-- The full publication directory, navigation, sidebar, theme switcher, and other pages retain their existing implementation.
+- The navigation, sidebar and theme switcher retain their existing implementation. The publication directory is generated from the same paper data as the homepage, with progressive search, year and topic filters.
+
+## Search and project pages
+
+`node scripts/update-homepage.cjs` also runs `scripts/build-discovery.cjs`. It updates page titles, descriptions, canonical URLs and social metadata in both HTML and navigation payloads, then builds the sitemap, robots.txt, publication directory and three standalone project pages. Never patch the compiled framework bundles.
+
+- `homepage-content.json`: SEO title/description, Google verification tag, paper topics, years and project URLs.
+- `project-content.json`: project overview, methods, results, source URLs and verified citations. Keep numerical claims tied to the source paper and its evaluation setting.
+- `publication-citations.json`: base BibTeX for the complete directory; project citations override corresponding entries. Author order is synchronized from the homepage data. Generated `.bib` files live in `papers/`.
+- `assets/discovery.css` and `assets/discovery.js`: responsive project/directory styles, search and combined filters, reset and citation copy. All paper content and citations remain readable without JavaScript. Event delegation supports client navigation from every original site page without mutating content before hydration.
+- `googleccd68ae944b7fdd5.html`: Google Search Console verification file supplied by the owner. Preserve this file and the verification meta tag.
+
+After deployment, the owner must click Verify in Search Console and submit `https://hamings1.github.io/sitemap.xml`. Published verification evidence alone does not confirm that Google has verified the property or indexed its pages. No Search Console account credentials are stored in the repository.
+
+Homepage News shows the latest five entries with an accessible native disclosure for earlier entries. Others is grouped by year. Oral/Spotlight are separate badges. The original left sidebar is preserved.
 
 ## Visitor map
 

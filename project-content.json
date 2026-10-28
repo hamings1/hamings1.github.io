@@ -1,0 +1,53 @@
+[
+  {
+    "id": "liang2026spikinglm",
+    "name": "SpikingLM",
+    "tagline": "Bringing language understanding to fully spiking computation.",
+    "overview": "SpikingLM addresses two obstacles in deep spiking language models: inactive neurons that weaken gradients, and the loss of token competition when Softmax is removed. It combines Distribution-aware Scaling with Spike2Max to improve training and attention while retaining efficient computation.",
+    "method": [
+      ["Distribution-aware Scaling", "Rescales linear outputs into a range that supports neuron activity and gradient propagation. The scaling parameters can be fused into the preceding linear layers for inference."],
+      ["Spike2Max attention", "Restores competition between tokens using base-2 exponentiation and max-subtraction, enabling efficient bit-shift operations."]
+    ],
+    "results": [
+      ["57.9%", "lower energy consumption reported in the paper's evaluation"],
+      [">95%", "energy reduction for Spike2Max compared with Softmax"]
+    ],
+    "resultNote": "The paper evaluates language understanding on GLUE. See the paper for model configurations, energy assumptions and comparisons.",
+    "source": "https://proceedings.mlr.press/v306/liang26ae.html",
+    "citation": "@inproceedings{pmlr-v306-liang26ae,\n  title = {{SpikingLM}: Towards Fully Spiking Language Model},\n  author = {Liang, Yu and Zhou, Zijian and Wei, Wenjie and Wang, Shuai and Cao, Honglin and Belatreche, Ammar and Yang, Yu and Zhang, Malu and Yang, Yang and Li, Haizhou},\n  booktitle = {Proceedings of the 43rd International Conference on Machine Learning},\n  series = {Proceedings of Machine Learning Research},\n  volume = {306},\n  pages = {73744--73762},\n  year = {2026},\n  url = {https://proceedings.mlr.press/v306/liang26ae.html}\n}"
+  },
+  {
+    "id": "liang2025towards",
+    "name": "AGMM",
+    "tagline": "More stable learning for accurate binary spiking networks.",
+    "overview": "Binary spiking networks combine event-driven computation with compact synaptic weights. AGMM investigates frequent weight sign flipping as a training bottleneck and adapts gradient magnitudes to improve learning stability.",
+    "method": [
+      ["Understand sign flipping", "Analyze how repeated changes in binary weight signs interfere with learning."],
+      ["Adapt gradient magnitudes", "Modulate gradients during training to reduce unnecessary weight sign changes and improve convergence."]
+    ],
+    "results": [
+      ["Faster convergence", "reported relative to the binary spiking baselines evaluated in the paper"],
+      ["Static + neuromorphic", "evaluation on both conventional image and event-based datasets"]
+    ],
+    "resultNote": "The experiments report improved binary-network accuracy and a narrower gap to full-precision counterparts. Detailed settings and comparisons are available in the paper.",
+    "source": "https://ojs.aaai.org/index.php/AAAI/article/view/32130",
+    "citation": "@inproceedings{liang2025towards,\n  title = {Towards Accurate Binary Spiking Neural Networks: Learning with Adaptive Gradient Modulation Mechanism},\n  author = {Liang, Yu and Wei, Wenjie and Belatreche, Ammar and Cao, Honglin and Zhou, Zijian and Wang, Shuai and Zhang, Malu and Yang, Yang},\n  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},\n  volume = {39},\n  number = {2},\n  pages = {1402--1410},\n  year = {2025},\n  doi = {10.1609/aaai.v39i2.32130}\n}"
+  },
+  {
+    "id": "liang2025bso",
+    "name": "BSO",
+    "tagline": "Online optimization for binary weights with less training memory.",
+    "overview": "BSO reduces the memory burden of training binary spiking networks by updating binary weights directly. Its temporal-aware variant, T-BSO, uses gradient information across time steps to adjust the update threshold.",
+    "method": [
+      ["Direct binary updates", "Flip a binary weight when the product of gradient momentum and the weight crosses a threshold, removing the need to maintain latent weights."],
+      ["Temporal-aware thresholds", "T-BSO incorporates temporal gradient information into adaptive threshold selection."]
+    ],
+    "results": [
+      ["No latent weights", "direct weight updates within an online training framework"],
+      ["Convergence analysis", "formal regret bounds for BSO and T-BSO"]
+    ],
+    "resultNote": "The paper reports improved optimization performance over the evaluated binary spiking training methods. Consult its experiments for accuracy and memory comparisons.",
+    "source": "https://proceedings.mlr.press/v267/liang25r.html",
+    "citation": "@inproceedings{pmlr-v267-liang25r,\n  title = {{BSO}: Binary Spiking Online Optimization Algorithm},\n  author = {Liang, Yu and Yang, Yu and Wei, Wenjie and Belatreche, Ammar and Wang, Shuai and Zhang, Malu and Yang, Yang},\n  booktitle = {Proceedings of the 42nd International Conference on Machine Learning},\n  series = {Proceedings of Machine Learning Research},\n  volume = {267},\n  pages = {37442--37455},\n  year = {2025},\n  url = {https://proceedings.mlr.press/v267/liang25r.html}\n}"
+  }
+]
