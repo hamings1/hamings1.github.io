@@ -17,6 +17,8 @@ The neutral world outline uses public-domain Natural Earth data distributed in `
 
 ## Paper figures
 
+The `others` array contains the remaining papers, with verified publisher/arXiv links and the owner highlighted by exact name. Its nine entries plus the three featured papers cover the twelve records on the Publications page. News includes all authorship positions, grouped by conference and year; `paperIds` records the coverage behind each count. Year-only news labels refer to conference years, not inferred acceptance months. The final IJCAI proceedings supplies the author order for BESTformer.
+
 - SpikingLM: Figure 1, page 3, https://proceedings.mlr.press/v306/liang26ae.html
 - AGMM: Figure 3, page 4, https://arxiv.org/abs/2502.14344
 - BSO: Figure 2, page 4, https://arxiv.org/abs/2511.12502

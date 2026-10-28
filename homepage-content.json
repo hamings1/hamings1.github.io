@@ -3,17 +3,41 @@
   "phoneHref": "tel:+8618935255267",
   "additionalPhone": "(+86) 15828375248",
   "additionalPhoneHref": "tel:+8615828375248",
-  "updated": "October 22, 2026",
+  "updated": "October 28, 2026",
   "services": {
-    "journals": ["TETCI", "TMLR"],
+    "journals": [
+      "TETCI",
+      "TMLR"
+    ],
     "conferences": [
-      {"venue":"ICLR", "year":"2027"},
-      {"venue":"AAAI", "year":"2027"},
-      {"venue":"ICML", "year":"2026"},
-      {"venue":"NeurIPS", "year":"2026"},
-      {"venue":"AAAI", "year":"2025"},
-      {"venue":"CVPR", "year":"2025"},
-      {"venue":"ICLR", "year":"2025"}
+      {
+        "venue": "ICLR",
+        "year": "2027"
+      },
+      {
+        "venue": "AAAI",
+        "year": "2027"
+      },
+      {
+        "venue": "ICML",
+        "year": "2026"
+      },
+      {
+        "venue": "NeurIPS",
+        "year": "2026"
+      },
+      {
+        "venue": "AAAI",
+        "year": "2025"
+      },
+      {
+        "venue": "CVPR",
+        "year": "2025"
+      },
+      {
+        "venue": "ICLR",
+        "year": "2025"
+      }
     ]
   },
   "publications": [
@@ -52,8 +76,217 @@
     }
   ],
   "news": [
-    {"date":"2026-05","content":"5 papers accepted by ICML 2026 🎉"},
-    {"date":"2025-05","content":"Our work has been accepted by ICML 🎉"},
-    {"date":"2025-01","content":"Our work has been accepted by AAAI 🎉"}
+    {
+      "date": "2026",
+      "content": "5 papers accepted by ICML 2026, including 1 Spotlight! 🎉",
+      "paperIds": [
+        "liang2026spikinglm",
+        "zhou2026positional",
+        "mao2026seps",
+        "zhou2026adas",
+        "zhou2026smoothspike"
+      ]
+    },
+    {
+      "date": "2026",
+      "content": "1 paper accepted by AAAI 2026! 🎉",
+      "paperIds": [
+        "cao2026training"
+      ]
+    },
+    {
+      "date": "2025",
+      "content": "1 paper accepted by ICML 2025! 🎉",
+      "paperIds": [
+        "liang2025bso"
+      ]
+    },
+    {
+      "date": "2025",
+      "content": "1 paper accepted by IJCAI 2025! 🎉",
+      "paperIds": [
+        "cao2025binary"
+      ]
+    },
+    {
+      "date": "2025",
+      "content": "2 papers accepted by ICLR 2025! 🎉",
+      "paperIds": [
+        "wang2025spiking",
+        "wei2025qp"
+      ]
+    },
+    {
+      "date": "2025",
+      "content": "1 paper accepted by AAAI 2025 (Oral)! 🎉",
+      "paperIds": [
+        "liang2025towards"
+      ]
+    },
+    {
+      "date": "2024",
+      "content": "1 paper accepted by ACM Multimedia 2024! 🎉",
+      "paperIds": [
+        "wei2024q"
+      ]
+    }
+  ],
+  "others": [
+    {
+      "id": "zhou2026positional",
+      "title": "Positional Encoding for Spiking Transformers",
+      "authors": [
+        "Zijian Zhou",
+        "Yu Liang",
+        "Honglin Cao",
+        "Ammar Belatreche",
+        "Jieyuan Zhang",
+        "Wenjie Wei",
+        "Shuai Wang",
+        "Malu Zhang",
+        "Yang Yang",
+        "Haizhou Li"
+      ],
+      "venue": "ICML 2026",
+      "paper": "https://proceedings.mlr.press/v306/zhou26ab.html"
+    },
+    {
+      "id": "mao2026seps",
+      "title": "SEPS: Semantic-Enhanced Patch Slimming Framework for Fine-Grained Cross-Modal Alignment",
+      "authors": [
+        "Xinyu Mao",
+        "Junsi Li",
+        "Haoji Zhang",
+        "Yu Liang",
+        "Ming Sun"
+      ],
+      "venue": "ICML 2026",
+      "paper": "https://proceedings.mlr.press/v306/mao26d.html"
+    },
+    {
+      "id": "zhou2026adas",
+      "title": "AdaS: Adaptive Gradient Descent for Spiking Transformers",
+      "authors": [
+        "Zijian Zhou",
+        "Honglin Cao",
+        "Ammar Belatreche",
+        "Wenjie Wei",
+        "Yimeng Shan",
+        "Yu Liang",
+        "Yu Yang",
+        "Shuai Wang",
+        "Yalan Ye",
+        "Malu Zhang",
+        "Yang Yang",
+        "Haizhou Li"
+      ],
+      "venue": "ICML 2026",
+      "paper": "https://proceedings.mlr.press/v306/zhou26d.html"
+    },
+    {
+      "id": "zhou2026smoothspike",
+      "title": "SmoothSpike: Spiking Transformer with Learnable Hadamard Transformation",
+      "authors": [
+        "Zijian Zhou",
+        "Wenjie Wei",
+        "Yu Liang",
+        "Jialin Li",
+        "Ammar Belatreche",
+        "Honglin Cao",
+        "Shuai Wang",
+        "Malu Zhang",
+        "Yang Yang",
+        "Haizhou Li"
+      ],
+      "venue": "ICML 2026 · Spotlight",
+      "paper": "https://proceedings.mlr.press/v306/zhou26ax.html"
+    },
+    {
+      "id": "cao2026training",
+      "title": "Towards Training-Free and Accurate ANN-to-SNN Conversion via Activation-Aware Redistribution",
+      "authors": [
+        "Honglin Cao",
+        "Shuai Wang",
+        "Zijian Zhou",
+        "Ammar Belatreche",
+        "Wenjie Wei",
+        "Yu Liang",
+        "Yu Yang",
+        "Rui Xi",
+        "Malu Zhang",
+        "Haizhou Li"
+      ],
+      "venue": "AAAI 2026",
+      "paper": "https://ojs.aaai.org/index.php/AAAI/article/view/37148"
+    },
+    {
+      "id": "cao2025binary",
+      "title": "Binary Event-Driven Spiking Transformer",
+      "authors": [
+        "Honglin Cao",
+        "Zijian Zhou",
+        "Wenjie Wei",
+        "Yu Liang",
+        "Ammar Belatreche",
+        "Dehao Zhang",
+        "Malu Zhang",
+        "Yang Yang",
+        "Haizhou Li"
+      ],
+      "venue": "IJCAI 2025",
+      "paper": "https://www.ijcai.org/proceedings/2025/458"
+    },
+    {
+      "id": "wang2025spiking",
+      "title": "Spiking Vision Transformer with Saccadic Attention",
+      "authors": [
+        "Shuai Wang",
+        "Malu Zhang",
+        "Dehao Zhang",
+        "Ammar Belatreche",
+        "Yichen Xiao",
+        "Yu Liang",
+        "Yimeng Shan",
+        "Qian Sun",
+        "Enqi Zhang",
+        "Yang Yang"
+      ],
+      "venue": "ICLR 2025",
+      "paper": "https://arxiv.org/abs/2502.12677"
+    },
+    {
+      "id": "wei2025qp",
+      "title": "QP-SNN: Quantized and Pruned Spiking Neural Networks",
+      "authors": [
+        "Wenjie Wei",
+        "Malu Zhang",
+        "Zijian Zhou",
+        "Ammar Belatreche",
+        "Yimeng Shan",
+        "Yu Liang",
+        "Honglin Cao",
+        "Jieyuan Zhang",
+        "Yang Yang"
+      ],
+      "venue": "ICLR 2025",
+      "paper": "https://arxiv.org/abs/2502.05905"
+    },
+    {
+      "id": "wei2024q",
+      "title": "Q-SNNs: Quantized Spiking Neural Networks",
+      "authors": [
+        "Wenjie Wei",
+        "Yu Liang",
+        "Ammar Belatreche",
+        "Yichen Xiao",
+        "Honglin Cao",
+        "Zhenbang Ren",
+        "Guoqing Wang",
+        "Malu Zhang",
+        "Yang Yang"
+      ],
+      "venue": "ACM MM 2024",
+      "paper": "https://arxiv.org/abs/2406.13672"
+    }
   ]
 }
