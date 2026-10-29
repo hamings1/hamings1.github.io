@@ -5,15 +5,31 @@ const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 const data = JSON.parse(fs.readFileSync(path.join(root, 'homepage-content.json'), 'utf8'));
 const h = (tag, props = {}, children = undefined) => ['$', tag, null, {...props, ...(children === undefined ? {} : {children})}];
-const heading = (icon, text, more) => h('div', {className:'home-heading'}, [h('h2',{},[h('span',{'aria-hidden':'true'},icon),text]), ...(more ? [h('a',{className:'view-all',href:typeof more==='string'?more:'/publications/'},'View All →')] : [])]);
+const outlinePaths = {
+  About:'M20 21v-2a7 7 0 0 0-14 0v2 M17 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0',
+  News:'M4 4h16v16H4z M8 8h8 M8 12h8 M8 16h4',
+  Publications:'M4 4h6a3 3 0 0 1 3 3v14a4 4 0 0 0-4-2H4z M13 7a3 3 0 0 1 3-3h5v15h-4a4 4 0 0 0-4 2',
+  Services:'m12 3 7 3v6c0 4-7 9-7 9s-7-5-7-9V6z m-3 9 2 2 4-4',
+  Visitors:'M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0 M3 12h18 M12 3c5 5 5 13 0 18 M12 3c-5 5-5 13 0 18',
+  Phone:'M7 3H4a1 1 0 0 0-1 1c0 9.4 7.6 17 17 17a1 1 0 0 0 1-1v-3l-5-2-2 2a15 15 0 0 1-7-7l2-2z',
+  WeChat:'M21 11a8 8 0 0 1-8 8H9l-5 3 1-6a8 8 0 1 1 16-5 M8 10h.01 M12 10h.01 M16 10h.01',
+  Copy:'M9 9h11v12H9z M5 16H3V3h12v2',
+  Project:'M8 4H4v16h16v-4 M13 3h8v8 M10 14 21 3'
+};
+const outline = kind => h('svg',{viewBox:'0 0 24 24',fill:'none',stroke:'currentColor',strokeWidth:1.7,strokeLinecap:'round',strokeLinejoin:'round','aria-hidden':'true'},h('path',{d:outlinePaths[kind]}));
+const heading = (_icon, text, more) => h('div', {className:'home-heading'}, [h('h2',{},[outline(text),text]), ...(more ? [h('a',{className:'view-all',href:typeof more==='string'?more:'/publications/'},'View All →')] : [])]);
 const icon = kind => h('svg',{viewBox:'0 0 24 24',fill:'none',stroke:'currentColor',strokeWidth:1.7,'aria-hidden':'true'},h('path',{d:kind==='Paper'?'M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z M14 2v6h6 M8 13h8 M8 17h8':'M9 19c-4.3 1.3-4.3-2.2-6-2.7 M15 22v-3.4c0-1 .1-1.4-.5-2 3.3-.4 6.5-1.6 6.5-7a5.4 5.4 0 0 0-1.5-3.7c.2-.9.2-2.3-.2-3.3 0 0-1.3-.4-4.2 1.5a14 14 0 0 0-6.2 0C6 1.2 4.7 1.6 4.7 1.6c-.4 1-.4 2.4-.2 3.3A5.4 5.4 0 0 0 3 8.6c0 5.4 3.2 6.6 6.5 7-.6.6-.5 1-.5 2V22'}));
 const link = (label, href) => h('a',{href,target:'_blank',rel:'noopener noreferrer',className:'paper-button'},[icon(label),label]);
-const projectLink = p => h('a',{href:p.project,className:'paper-button project-button'},'Project →');
+const projectLink = p => h('a',{href:p.project,className:'paper-button project-button'},[outline('Project'),'Project']);
 const venue = p => [h('span',{className:'venue-label'},p.venue.split(' · ')[0]),...(p.venue.includes(' · ')?[h('span',{className:'paper-distinction'},p.venue.split(' · ')[1])]:[])];
 const newsItem = n => h('li',{},[h('time',{dateTime:n.date},n.date),h('span',{},n.content)]);
 const paper = p => h('article',{className:'paper-row',id:p.id},[
-  h('a',{className:'paper-figure',href:p.paper,target:'_blank',rel:'noopener noreferrer','aria-label':`Read ${p.title}`},[
-    h('img',{src:p.image,alt:p.imageAlt,width:1200,height:600,loading:'lazy',decoding:'async'}),h('span',{className:'paper-venue'},venue(p))]),
+  h('div',{className:'paper-visual'},[
+    h('div',{className:'paper-venue'},venue(p)),
+    h('a',{className:'paper-figure',href:p.project,'aria-label':`Explore ${p.title}`},[
+      h('span',{className:'paper-image-canvas'},h('img',{src:p.image,alt:p.imageAlt,width:1200,height:600,loading:'lazy',decoding:'async'})),
+      h('span',{className:'paper-figure-caption'},[h('span',{},'Method overview'),h('span',{},[outline('Project'),'Explore project'])])
+    ])]),
   h('div',{},[h('h3',{className:'paper-title'},h('a',{href:p.paper,target:'_blank',rel:'noopener noreferrer'},p.title)),
     h('ul',{className:'paper-details'},[
       h('li',{className:'paper-authors'},[h('strong',{},'Yu Liang'),p.authors.slice('Yu Liang'.length)]),
@@ -23,14 +39,23 @@ const otherPaper = p => h('li',{id:p.id,className:'other-paper'},[
   h('div',{className:'other-paper-authors'},[p.authors.slice(0,p.authors.indexOf('Yu Liang')).join(', ')+(p.authors.indexOf('Yu Liang')>0?', ':''),h('strong',{},'Yu Liang'),(p.authors.indexOf('Yu Liang')<p.authors.length-1?', ':'')+p.authors.slice(p.authors.indexOf('Yu Liang')+1).join(', ')]),
   h('div',{className:'paper-links'},[link('Paper',p.paper),...(p.code?[link('Code',p.code)]:[])])
 ]);
+const contact = (label, phone, href, kind, id) => h('div',{className:'contact-item'},[
+  h('span',{className:'contact-icon'},outline(kind)),
+  h('div',{className:'contact-info'},[h('span',{className:'contact-label'},label),h('a',{href,id},phone)]),
+  h('button',{type:'button',className:'contact-copy','data-copy-contact':href.slice(4),'data-contact-target':id,'aria-label':`Copy ${label} number ${phone}`,title:'Copy number'},[outline('Copy'),h('span',{},'Copy')])
+]);
 const content = h('section',{id:'about',className:'scroll-mt-24 space-y-8 home-content'},[
-  h('link',{rel:'stylesheet',href:'/assets/homepage.css?v=20261028-discovery'}),
+  h('link',{rel:'stylesheet',href:'/assets/homepage.css?v=20261029-polish'}),
   h('section',{'aria-label':'About'},[heading('👋','About'),h('div',{className:'home-about'},[
     h('p',{className:'research-statement'},'Building efficient AI with compact models and brain-inspired computation.'),
     h('p',{},['I am a doctoral student in the School of Computer Science at the University of Electronic Science and Technology of China (UESTC), under the supervision of ',h('a',{href:'https://www.en.scse.uestc.edu.cn/info/1085/2257.htm',target:'_blank',rel:'noopener noreferrer'},'Prof. Malu Zhang'),'. I am participating in a joint Ph.D. training program with the Shenzhen Loop Area Institute.']),
     h('p',{},'Previously, I graduated from UESTC with a Bachelor of Engineering degree.'),
     h('p',{},'My current research focuses on model compression, the integration of large models, and neuromorphic computing.'),
-    h('p',{className:'contact-line'},['Please feel free to contact me via Phone: ',h('a',{href:data.phoneHref},data.phone),' (also WeChat) / ',h('a',{href:data.additionalPhoneHref},data.additionalPhone),'.'])])]),
+    h('div',{className:'contact-panel','aria-label':'Contact information'},[
+      h('p',{className:'contact-intro'},'Get in touch'),
+      h('div',{className:'contact-grid'},[contact('Phone & WeChat',data.phone,data.phoneHref,'WeChat','contact-primary'),contact('Phone',data.additionalPhone,data.additionalPhoneHref,'Phone','contact-secondary')]),
+      h('p',{className:'contact-status',role:'status','aria-live':'polite'},'')
+    ])])]),
   h('section',{'aria-label':'News'},[heading('🔥','News'),h('ul',{className:'home-news'},data.news.slice(0,5).map(newsItem)),...(data.news.length>5?[h('details',{className:'news-archive'},[h('summary',{},'Earlier news'),h('ul',{className:'home-news'},data.news.slice(5).map(newsItem))])]:[])]),
   h('section',{'aria-label':'Publications'},[heading('📝','Publications',true),h('div',{className:'paper-list'},data.publications.map(paper)),
     h('section',{id:'other-publications','aria-label':'Other Publications',className:'other-publications'},[
@@ -71,7 +96,7 @@ function html(n) {
   if(!Array.isArray(n))return esc(n);
   if(n[0]!=='$')return n.map(html).join('');
   const [,tag,,props]=n;
-  const names={className:'class',dateTime:'datetime',strokeWidth:'stroke-width'};
+  const names={className:'class',dateTime:'datetime',strokeWidth:'stroke-width',strokeLinecap:'stroke-linecap',strokeLinejoin:'stroke-linejoin'};
   const attrs=Object.entries(props).filter(([k])=>k!=='children').map(([k,v])=>` ${names[k]||k}="${esc(v)}"`).join('');
   return `<${tag}${attrs}>`+(['img','link'].includes(tag)?'':html(props.children)+`</${tag}>`);
 }

@@ -30,6 +30,24 @@
     if (event.target.matches('.publication-filters')) requestAnimationFrame(() => filter(event.target));
   });
   document.addEventListener('click', async event => {
+    const contact = event.target.closest('[data-copy-contact]');
+    if (contact) {
+      const status = contact.closest('.contact-panel').querySelector('.contact-status');
+      try {
+        await navigator.clipboard.writeText(contact.dataset.copyContact);
+        status.textContent = `Copied ${contact.dataset.copyContact}`;
+      } catch {
+        const number = document.getElementById(contact.dataset.contactTarget);
+        if (number) {
+          const selection = window.getSelection(), range = document.createRange();
+          range.selectNodeContents(number);
+          selection.removeAllRanges();
+          selection.addRange(range);
+        }
+        status.textContent = 'Copy unavailable. Select the number and copy it manually.';
+      }
+      return;
+    }
     const button = event.target.closest('[data-copy-citation]');
     if (!button) return;
     const code = document.getElementById(button.dataset.copyCitation);

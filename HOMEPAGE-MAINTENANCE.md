@@ -21,6 +21,8 @@ After deployment, the owner must click Verify in Search Console and submit `http
 
 Homepage News shows the latest five entries with an accessible native disclosure for earlier entries. Others is grouped by year. Oral/Spotlight are separate badges. The original left sidebar is preserved.
 
+The homepage uses matching outline heading icons, pale-blue venue labels and gold distinction badges. Featured figures use a shared 2:1 canvas with consistent padding and `object-fit: contain`; the scientific diagrams are never cropped or recolored. Their captions link to the full project pages. Contact numbers remain telephone links, with a separate copy control for each number; clipboard failures select the visible number and announce manual-copy instructions. All homepage presentation rules stay scoped to `.home-content` to preserve the sidebar.
+
 ## Visitor map
 
 The map uses a Cloudflare Worker and D1 database. See `cloudflare/README.md` for deployment. The public Worker origin belongs in `assets/visitor-config.json`; no credentials are published. An empty endpoint displays an honest pending state. The map runs inside `visitors.html`, isolated from React hydration, and loads with the homepage so visits do not depend on scrolling to the footer.

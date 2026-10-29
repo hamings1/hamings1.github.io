@@ -45,7 +45,7 @@ const directory = h('section',{id:'publication-directory',className:'publication
 ]);
 const person={'@type':'Person','@id':origin+'/#person',name:'Yu Liang',url:origin+'/',image:origin+'/bio.jpg',affiliation:{'@type':'CollegeOrUniversity',name:'University of Electronic Science and Technology of China',alternateName:'UESTC'},knowsAbout:['Efficient AI','Model Compression','Language Models','Neuromorphic Computing'],sameAs:['https://github.com/hamings1','https://www.linkedin.com/in/yu-liang-641685288']};
 const schema={'@context':'https://schema.org','@type':'ProfilePage','@id':origin+'/#profile',url:origin+'/',mainEntity:person};
-const commonHead=[h('link',{rel:'stylesheet',href:'/assets/discovery.css?v=20261028'}),h('script',{src:'/assets/discovery.js?v=20261028',defer:true})];
+const commonHead=[h('link',{rel:'stylesheet',href:'/assets/discovery.css?v=20261028'}),h('script',{src:'/assets/discovery.js?v=20261029-polish',defer:true})];
 function metadata(title,description,url,image) {return [
   h('title',{},title),h('meta',{name:'description',content:description}),h('meta',{name:'author',content:'Yu Liang'}),h('link',{rel:'canonical',href:url}),
   h('meta',{property:'og:title',content:title}),h('meta',{property:'og:description',content:description}),h('meta',{property:'og:url',content:url}),h('meta',{property:'og:type',content:'website'}),h('meta',{property:'og:site_name',content:'Yu Liang | Efficient AI'}),h('meta',{name:'twitter:card',content:image?'summary_large_image':'summary'}),h('meta',{name:'twitter:title',content:title}),h('meta',{name:'twitter:description',content:description}),...(image?[h('meta',{property:'og:image',content:image}),h('meta',{name:'twitter:image',content:image})]:[]),h('link',{rel:'icon',href:'/favicon.svg'})
