@@ -96,7 +96,7 @@
   "news": [
     {
       "date": "2026-05",
-      "content": "ICML 2026 — 5 papers accepted (1 Spotlight)",
+      "content": "ICML 2026 — Five of our papers have been accepted, including SpikingLM and one Spotlight paper, SmoothSpike.",
       "paperIds": [
         "liang2026spikinglm",
         "zhou2026positional",
@@ -107,48 +107,48 @@
       "dateSource": "https://wenjie-wei.github.io/",
       "dateBasis": "Coauthor acceptance announcement",
       "venue": "ICML 2026",
-      "text": "5 papers accepted (1 Spotlight)",
+      "text": "Five of our papers have been accepted, including SpikingLM and one Spotlight paper, SmoothSpike.",
       "href": "/publications/"
     },
     {
       "date": "2025-11",
-      "content": "AAAI 2026 — 1 paper accepted",
+      "content": "AAAI 2026 — Our work on training-free ANN-to-SNN conversion via activation-aware redistribution has been accepted.",
       "paperIds": [
         "cao2026training"
       ],
       "dateSource": "https://aaai.org/conference/aaai/aaai-26/",
       "dateBasis": "Official conference author notification",
       "venue": "AAAI 2026",
-      "text": "1 paper accepted",
+      "text": "Our work on training-free ANN-to-SNN conversion via activation-aware redistribution has been accepted.",
       "href": "#cao2026training"
     },
     {
       "date": "2025-05",
-      "content": "ICML 2025 — 1 paper accepted",
+      "content": "ICML 2025 — Our paper BSO, on online optimization for binary spiking neural networks, has been accepted.",
       "paperIds": [
         "liang2025bso"
       ],
       "dateSource": "https://icml.cc/Conferences/2025/Dates",
       "dateBasis": "Official conference author notification",
       "venue": "ICML 2025",
-      "text": "1 paper accepted",
+      "text": "Our paper BSO, on online optimization for binary spiking neural networks, has been accepted.",
       "href": "#liang2025bso"
     },
     {
       "date": "2025-04",
-      "content": "IJCAI 2025 — 1 paper accepted",
+      "content": "IJCAI 2025 — Our paper on binary event-driven spiking transformers has been accepted.",
       "paperIds": [
         "cao2025binary"
       ],
       "dateSource": "https://2025.ijcai.org/important-dates/",
       "dateBasis": "Official conference author notification",
       "venue": "IJCAI 2025",
-      "text": "1 paper accepted",
+      "text": "Our paper on binary event-driven spiking transformers has been accepted.",
       "href": "#cao2025binary"
     },
     {
       "date": "2025-01",
-      "content": "ICLR 2025 — 2 papers accepted",
+      "content": "ICLR 2025 — Two of our papers have been accepted, covering saccadic attention in spiking vision transformers and quantization and pruning of spiking neural networks.",
       "paperIds": [
         "wang2025spiking",
         "wei2025qp"
@@ -156,31 +156,31 @@
       "dateSource": "https://iclr.cc/Conferences/2025/Dates",
       "dateBasis": "Official conference author notification",
       "venue": "ICLR 2025",
-      "text": "2 papers accepted",
+      "text": "Two of our papers have been accepted, covering saccadic attention in spiking vision transformers and quantization and pruning of spiking neural networks.",
       "href": "/publications/"
     },
     {
       "date": "2024-12",
-      "content": "AAAI 2025 — 1 paper accepted (Oral)",
+      "content": "AAAI 2025 — Our paper on adaptive gradient modulation for binary spiking neural networks has been accepted for an Oral presentation.",
       "paperIds": [
         "liang2025towards"
       ],
       "dateSource": "https://aaai.org/conference/aaai/aaai-25/",
       "dateBasis": "Official conference author notification",
       "venue": "AAAI 2025",
-      "text": "1 paper accepted (Oral)",
+      "text": "Our paper on adaptive gradient modulation for binary spiking neural networks has been accepted for an Oral presentation.",
       "href": "#liang2025towards"
     },
     {
       "date": "2024-07",
-      "content": "ACM Multimedia 2024 — 1 paper accepted",
+      "content": "ACM Multimedia 2024 — Our paper Q-SNNs, on quantized spiking neural networks, has been accepted.",
       "paperIds": [
         "wei2024q"
       ],
       "dateSource": "https://2024.acmmm.org/important-dates",
       "dateBasis": "Official conference author notification",
       "venue": "ACM Multimedia 2024",
-      "text": "1 paper accepted",
+      "text": "Our paper Q-SNNs, on quantized spiking neural networks, has been accepted.",
       "href": "#wei2024q"
     }
   ],

@@ -27,7 +27,8 @@ main > .max-w-6xl:has(#about.home-content), body:has(#about.home-content) .max-w
 .home-content .home-about a,.home-content .view-all { color:var(--home-link); }
 .home-content a:hover { text-decoration:underline; text-underline-offset:3px; }
 .home-content a:focus-visible,.home-content button:focus-visible,.home-content summary:focus-visible { outline:2px solid var(--home-link); outline-offset:4px; }
-.home-content .home-about,.home-content .home-news,.home-content .news-archive,.home-content .other-publications,.home-content .home-services { max-width:820px; }
+/* Align section bodies with their headings across the full right column. */
+.home-content .home-about,.home-content .home-news,.home-content .news-archive,.home-content .other-publications,.home-content .home-services { width:100%; min-width:0; }
 .home-content .contact-panel { margin-top:18px; }
 .home-content .contact-grid { display:flex; flex-wrap:wrap; align-items:center; gap:8px 24px; }
 .home-content .contact-item { display:flex; align-items:center; gap:4px; min-width:0; }
@@ -83,9 +84,9 @@ main > .max-w-6xl:has(#about.home-content), body:has(#about.home-content) .max-w
 .home-content .visitor-frame { display:block; width:100%; max-width:500px; height:400px; border:0; margin:0 auto; color-scheme:light; }
 @media(max-width:767px) { .home-content .paper-row { grid-template-columns:1fr; gap:18px; } .home-content .paper-figure { width:100%; max-width:470px; margin:0 auto; } .home-content .paper-list { gap:35px; } .home-content .paper-title { font-size:18px; } .home-content .paper-details { font-size:14px; } .home-content .home-heading { margin-bottom:24px; } .home-content .visitor-frame { height:360px; } .home-content .paper-button { min-height:44px; padding:8px 12px; font-size:13px; } .home-content .home-news li { gap:12px; } }
 
-.home-content .paper-copy { max-width:820px; }
+.home-content .paper-copy { min-width:0; }
 .home-content .home-news strong { font-weight:600; }
-.home-content .home-news a { color:inherit; }
+.home-content .home-news a { color:var(--home-link); }
 .home-content .home-news a:hover { color:var(--home-link); }
 .home-content .other-paper-links { color:var(--home-muted); font-size:13px; line-height:1.7; }
 .home-content .inline-link { color:var(--home-link); text-decoration:none; }

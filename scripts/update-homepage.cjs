@@ -42,7 +42,7 @@ const contact = (label, phone, href, kind, id) => h('div',{className:'contact-it
   h('button',{type:'button',className:'contact-copy','data-copy-contact':href.slice(4),'data-contact-target':id,'aria-label':`Copy ${label} number ${phone}`,title:'Copy number'},[outline('Copy')])
 ]);
 const content = h('section',{id:'about',className:'scroll-mt-24 space-y-8 home-content'},[
-  h('link',{rel:'stylesheet',href:'/assets/homepage.css?v=20261029-refine'}),
+  h('link',{rel:'stylesheet',href:'/assets/homepage.css?v=20261029-news-width'}),
   h('section',{'aria-label':'About'},[heading('👋','About'),h('div',{className:'home-about'},[
     h('p',{className:'research-statement'},'I work on efficient AI: making large models smaller, faster, and more energy-efficient through model compression and brain-inspired computation.'),
     h('p',{},['I am a Ph.D. student in the School of Computer Science at the University of Electronic Science and Technology of China (UESTC), advised by ',h('a',{href:'https://www.en.scse.uestc.edu.cn/info/1085/2257.htm',target:'_blank',rel:'noopener noreferrer'},'Prof. Malu Zhang'),', and part of a joint Ph.D. program with the Shenzhen Loop Area Institute. I received my B.Eng. from UESTC. My research focuses on model compression, combining large models with spiking neural networks, and neuromorphic computing.']),

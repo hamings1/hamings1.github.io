@@ -21,6 +21,8 @@ After deployment, the owner must click Verify in Search Console and submit `http
 
 Homepage News shows the latest five entries with an accessible native disclosure for earlier entries. Others is grouped by year. Oral/Spotlight are separate badges. The original left sidebar is preserved.
 
+Homepage section bodies use the full right-column width, aligned with their heading rules. Do not add separate width caps to About, News, Others or Services. Featured figures and the centered visitor map retain their own image dimensions. News uses complete sentences with paper names or research topics, while preserving the recorded acceptance months, paper counts and distinctions.
+
 The homepage uses muted outline heading icons, pale-blue venue labels and gold distinction badges. Featured figures use a shared 2:1 canvas with consistent padding and `object-fit: contain`; the scientific diagrams are never cropped or recolored. Figures link directly to project pages; venue labels appear above the paper titles. About emphasizes model compression, combining large models with spiking neural networks, and neuromorphic computing. Contact numbers appear in a compact inline strip with telephone links and accessible copy controls; clipboard failures select the visible number and announce manual-copy instructions. Keep the `contact-panel` and `contact-status` hooks when changing appearance. All homepage presentation rules stay scoped to `.home-content` to preserve the sidebar.
 
 ## Visitor map
