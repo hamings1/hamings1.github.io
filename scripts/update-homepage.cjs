@@ -22,37 +22,31 @@ const icon = kind => h('svg',{viewBox:'0 0 24 24',fill:'none',stroke:'currentCol
 const link = (label, href) => h('a',{href,target:'_blank',rel:'noopener noreferrer',className:'paper-button'},[icon(label),label]);
 const projectLink = p => h('a',{href:p.project,className:'paper-button project-button'},[outline('Project'),'Project']);
 const venue = p => [h('span',{className:'venue-label'},p.venue.split(' · ')[0]),...(p.venue.includes(' · ')?[h('span',{className:'paper-distinction'},p.venue.split(' · ')[1])]:[])];
-const newsItem = n => h('li',{},[h('time',{dateTime:n.date},n.date),h('span',{},n.content)]);
+const newsItem = n => h('li',{},[h('time',{dateTime:n.date},n.date),h('span',{},[h('strong',{},h('a',{href:n.href},n.venue)),` — ${n.text}`])]);
 const paper = p => h('article',{className:'paper-row',id:p.id},[
   h('div',{className:'paper-visual'},[
-    h('div',{className:'paper-venue'},venue(p)),
     h('a',{className:'paper-figure',href:p.project,'aria-label':`Explore ${p.title}`},[
-      h('span',{className:'paper-image-canvas'},h('img',{src:p.image,alt:p.imageAlt,width:1200,height:600,loading:'lazy',decoding:'async'})),
-      h('span',{className:'paper-figure-caption'},[h('span',{},'Method overview'),h('span',{},[outline('Project'),'Explore project'])])
+      h('span',{className:'paper-image-canvas'},h('img',{src:p.image,alt:p.imageAlt,width:1200,height:600,loading:'lazy',decoding:'async'}))
     ])]),
-  h('div',{},[h('h3',{className:'paper-title'},h('a',{href:p.paper,target:'_blank',rel:'noopener noreferrer'},p.title)),
+  h('div',{className:'paper-copy'},[h('div',{className:'paper-venue'},venue(p)),h('h3',{className:'paper-title'},h('a',{href:p.paper,target:'_blank',rel:'noopener noreferrer'},p.title)),
     h('ul',{className:'paper-details'},[
       h('li',{className:'paper-authors'},[h('strong',{},'Yu Liang'),p.authors.slice('Yu Liang'.length)]),
       h('li',{},p.description),h('li',{},h('div',{className:'paper-links'},[projectLink(p),link('Paper',p.paper),link('Code',p.code)]))])])]);
 const otherPaper = p => h('li',{id:p.id,className:'other-paper'},[
   h('div',{className:'other-paper-title'},[h('span',{className:'other-paper-venue'},venue(p)), ' ', h('a',{href:p.paper,target:'_blank',rel:'noopener noreferrer'},p.title)]),
   h('div',{className:'other-paper-authors'},[p.authors.slice(0,p.authors.indexOf('Yu Liang')).join(', ')+(p.authors.indexOf('Yu Liang')>0?', ':''),h('strong',{},'Yu Liang'),(p.authors.indexOf('Yu Liang')<p.authors.length-1?', ':'')+p.authors.slice(p.authors.indexOf('Yu Liang')+1).join(', ')]),
-  h('div',{className:'paper-links'},[link('Paper',p.paper),...(p.code?[link('Code',p.code)]:[])])
+  h('div',{className:'other-paper-links'},[h('a',{className:'inline-link',href:p.paper,target:'_blank',rel:'noopener noreferrer'},'Paper'),...(p.code?[' · ',h('a',{className:'inline-link',href:p.code,target:'_blank',rel:'noopener noreferrer'},'Code')]:[])])
 ]);
 const contact = (label, phone, href, kind, id) => h('div',{className:'contact-item'},[
-  h('span',{className:'contact-icon'},outline(kind)),
   h('div',{className:'contact-info'},[h('span',{className:'contact-label'},label),h('a',{href,id},phone)]),
-  h('button',{type:'button',className:'contact-copy','data-copy-contact':href.slice(4),'data-contact-target':id,'aria-label':`Copy ${label} number ${phone}`,title:'Copy number'},[outline('Copy'),h('span',{},'Copy')])
+  h('button',{type:'button',className:'contact-copy','data-copy-contact':href.slice(4),'data-contact-target':id,'aria-label':`Copy ${label} number ${phone}`,title:'Copy number'},[outline('Copy')])
 ]);
 const content = h('section',{id:'about',className:'scroll-mt-24 space-y-8 home-content'},[
-  h('link',{rel:'stylesheet',href:'/assets/homepage.css?v=20261029-polish'}),
+  h('link',{rel:'stylesheet',href:'/assets/homepage.css?v=20261029-refine'}),
   h('section',{'aria-label':'About'},[heading('👋','About'),h('div',{className:'home-about'},[
-    h('p',{className:'research-statement'},'Building efficient AI with compact models and brain-inspired computation.'),
-    h('p',{},['I am a doctoral student in the School of Computer Science at the University of Electronic Science and Technology of China (UESTC), under the supervision of ',h('a',{href:'https://www.en.scse.uestc.edu.cn/info/1085/2257.htm',target:'_blank',rel:'noopener noreferrer'},'Prof. Malu Zhang'),'. I am participating in a joint Ph.D. training program with the Shenzhen Loop Area Institute.']),
-    h('p',{},'Previously, I graduated from UESTC with a Bachelor of Engineering degree.'),
-    h('p',{},'My current research focuses on model compression, the integration of large models, and neuromorphic computing.'),
+    h('p',{className:'research-statement'},'I work on efficient AI: making large models smaller, faster, and more energy-efficient through model compression and brain-inspired computation.'),
+    h('p',{},['I am a Ph.D. student in the School of Computer Science at the University of Electronic Science and Technology of China (UESTC), advised by ',h('a',{href:'https://www.en.scse.uestc.edu.cn/info/1085/2257.htm',target:'_blank',rel:'noopener noreferrer'},'Prof. Malu Zhang'),', and part of a joint Ph.D. program with the Shenzhen Loop Area Institute. I received my B.Eng. from UESTC. My research focuses on model compression, combining large models with spiking neural networks, and neuromorphic computing.']),
     h('div',{className:'contact-panel','aria-label':'Contact information'},[
-      h('p',{className:'contact-intro'},'Get in touch'),
       h('div',{className:'contact-grid'},[contact('Phone & WeChat',data.phone,data.phoneHref,'WeChat','contact-primary'),contact('Phone',data.additionalPhone,data.additionalPhoneHref,'Phone','contact-secondary')]),
       h('p',{className:'contact-status',role:'status','aria-live':'polite'},'')
     ])])]),

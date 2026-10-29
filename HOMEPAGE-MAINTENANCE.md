@@ -21,7 +21,7 @@ After deployment, the owner must click Verify in Search Console and submit `http
 
 Homepage News shows the latest five entries with an accessible native disclosure for earlier entries. Others is grouped by year. Oral/Spotlight are separate badges. The original left sidebar is preserved.
 
-The homepage uses matching outline heading icons, pale-blue venue labels and gold distinction badges. Featured figures use a shared 2:1 canvas with consistent padding and `object-fit: contain`; the scientific diagrams are never cropped or recolored. Their captions link to the full project pages. Contact numbers remain telephone links, with a separate copy control for each number; clipboard failures select the visible number and announce manual-copy instructions. All homepage presentation rules stay scoped to `.home-content` to preserve the sidebar.
+The homepage uses muted outline heading icons, pale-blue venue labels and gold distinction badges. Featured figures use a shared 2:1 canvas with consistent padding and `object-fit: contain`; the scientific diagrams are never cropped or recolored. Figures link directly to project pages; venue labels appear above the paper titles. About emphasizes model compression, combining large models with spiking neural networks, and neuromorphic computing. Contact numbers appear in a compact inline strip with telephone links and accessible copy controls; clipboard failures select the visible number and announce manual-copy instructions. Keep the `contact-panel` and `contact-status` hooks when changing appearance. All homepage presentation rules stay scoped to `.home-content` to preserve the sidebar.
 
 ## Visitor map
 
@@ -41,4 +41,4 @@ Others supports an optional `code` URL, rendered beside Paper. Seven entries hav
 - AGMM: Figure 3, page 4, https://arxiv.org/abs/2502.14344
 - BSO: Figure 2, page 4, https://arxiv.org/abs/2511.12502
 
-Figures are extracted from the owner's papers. Each thumbnail links to its source publication; code buttons point to the owner's corresponding repositories.
+Figures are extracted from the owner's papers. Each featured thumbnail links to its project page; Paper and Code links lead to the publication and corresponding repository. Others uses inline Paper and optional Code links. News entries use `venue`, `text`, and `href` for the conference-first display; preserve dates and acceptance counts when editing these fields.

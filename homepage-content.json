@@ -48,7 +48,7 @@
       "venue": "ICML 2026",
       "image": "/papers/spikinglm.png",
       "imageAlt": "SpikingLM architecture with Distribution-aware Scaling and Spike2Max attention",
-      "description": "A fully spiking language model with Distribution-aware Scaling and Spike2Max attention for energy-efficient language understanding.",
+      "description": "Distribution-aware Scaling and Spike2Max attention enable fully spiking language models with stable training and energy-efficient language understanding.",
       "paper": "https://proceedings.mlr.press/v306/liang26ae.html",
       "code": "https://github.com/hamings1/SpikingLM",
       "project": "/projects/spikinglm/",
@@ -65,7 +65,7 @@
       "venue": "AAAI 2025 · Oral",
       "image": "/papers/agmm.png",
       "imageAlt": "Network architecture and backpropagation of Adaptive Gradient Modulation Mechanism",
-      "description": "Adaptive gradient modulation reduces frequent weight sign flipping, improving convergence and accuracy in binary spiking neural networks.",
+      "description": "Adaptive gradient modulation reduces weight sign flipping to improve convergence and accuracy in binary spiking neural networks.",
       "paper": "https://arxiv.org/abs/2502.14344",
       "code": "https://github.com/hamings1/AGMM",
       "project": "/projects/agmm/",
@@ -82,7 +82,7 @@
       "venue": "ICML 2025",
       "image": "/papers/bso.png",
       "imageAlt": "Binary weight update strategies in BSO and temporal-aware T-BSO",
-      "description": "Memory-efficient online training for binary spiking neural networks, with direct weight updates and a temporal-aware optimization variant.",
+      "description": "Direct binary weight updates reduce training memory; a temporal-aware variant adapts update thresholds using gradient information across time steps.",
       "paper": "https://arxiv.org/abs/2511.12502",
       "code": "https://github.com/hamings1/BSO",
       "project": "/projects/bso/",
@@ -96,7 +96,7 @@
   "news": [
     {
       "date": "2026-05",
-      "content": "5 papers accepted by ICML 2026, including 1 Spotlight! 🎉",
+      "content": "ICML 2026 — 5 papers accepted (1 Spotlight)",
       "paperIds": [
         "liang2026spikinglm",
         "zhou2026positional",
@@ -105,62 +105,83 @@
         "zhou2026smoothspike"
       ],
       "dateSource": "https://wenjie-wei.github.io/",
-      "dateBasis": "Coauthor acceptance announcement"
+      "dateBasis": "Coauthor acceptance announcement",
+      "venue": "ICML 2026",
+      "text": "5 papers accepted (1 Spotlight)",
+      "href": "/publications/"
     },
     {
       "date": "2025-11",
-      "content": "1 paper accepted by AAAI 2026! 🎉",
+      "content": "AAAI 2026 — 1 paper accepted",
       "paperIds": [
         "cao2026training"
       ],
       "dateSource": "https://aaai.org/conference/aaai/aaai-26/",
-      "dateBasis": "Official conference author notification"
+      "dateBasis": "Official conference author notification",
+      "venue": "AAAI 2026",
+      "text": "1 paper accepted",
+      "href": "#cao2026training"
     },
     {
       "date": "2025-05",
-      "content": "1 paper accepted by ICML 2025! 🎉",
+      "content": "ICML 2025 — 1 paper accepted",
       "paperIds": [
         "liang2025bso"
       ],
       "dateSource": "https://icml.cc/Conferences/2025/Dates",
-      "dateBasis": "Official conference author notification"
+      "dateBasis": "Official conference author notification",
+      "venue": "ICML 2025",
+      "text": "1 paper accepted",
+      "href": "#liang2025bso"
     },
     {
       "date": "2025-04",
-      "content": "1 paper accepted by IJCAI 2025! 🎉",
+      "content": "IJCAI 2025 — 1 paper accepted",
       "paperIds": [
         "cao2025binary"
       ],
       "dateSource": "https://2025.ijcai.org/important-dates/",
-      "dateBasis": "Official conference author notification"
+      "dateBasis": "Official conference author notification",
+      "venue": "IJCAI 2025",
+      "text": "1 paper accepted",
+      "href": "#cao2025binary"
     },
     {
       "date": "2025-01",
-      "content": "2 papers accepted by ICLR 2025! 🎉",
+      "content": "ICLR 2025 — 2 papers accepted",
       "paperIds": [
         "wang2025spiking",
         "wei2025qp"
       ],
       "dateSource": "https://iclr.cc/Conferences/2025/Dates",
-      "dateBasis": "Official conference author notification"
+      "dateBasis": "Official conference author notification",
+      "venue": "ICLR 2025",
+      "text": "2 papers accepted",
+      "href": "/publications/"
     },
     {
       "date": "2024-12",
-      "content": "1 paper accepted by AAAI 2025 (Oral)! 🎉",
+      "content": "AAAI 2025 — 1 paper accepted (Oral)",
       "paperIds": [
         "liang2025towards"
       ],
       "dateSource": "https://aaai.org/conference/aaai/aaai-25/",
-      "dateBasis": "Official conference author notification"
+      "dateBasis": "Official conference author notification",
+      "venue": "AAAI 2025",
+      "text": "1 paper accepted (Oral)",
+      "href": "#liang2025towards"
     },
     {
       "date": "2024-07",
-      "content": "1 paper accepted by ACM Multimedia 2024! 🎉",
+      "content": "ACM Multimedia 2024 — 1 paper accepted",
       "paperIds": [
         "wei2024q"
       ],
       "dateSource": "https://2024.acmmm.org/important-dates",
-      "dateBasis": "Official conference author notification"
+      "dateBasis": "Official conference author notification",
+      "venue": "ACM Multimedia 2024",
+      "text": "1 paper accepted",
+      "href": "#wei2024q"
     }
   ],
   "others": [
